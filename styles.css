@@ -1,0 +1,41 @@
+body{
+    margin: 0;
+}
+.download{
+    background-image: url(imagenes/back.png);
+    max-width: 100%;
+    height: 200vh;
+    display: flex;
+    justify-content: center;    
+}
+header{
+    background-color: white;
+    width: 90%;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 0.5rem;
+    margin: 5%;
+}
+.menu{
+    display: none;
+
+}
+.button-menu:hover .menu:hover{
+    display: inline-block;
+}
+
+.logo{
+    width: 8rem;
+    height: 6rem;
+    background-color: aqua;
+    display: block;
+}
+.download-button{
+    background-color:blueviolet;
+    border-radius: 0.5rem ;
+    border: 0px;
+    width: 4rem;
+    height: 80%;
+}
