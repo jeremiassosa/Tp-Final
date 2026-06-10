@@ -5,37 +5,107 @@ body{
     background-image: url(imagenes/back.png);
     max-width: 100%;
     height: 200vh;
-    display: flex;
-    justify-content: center;    
+    display: flex;   
 }
 header{
     background-color: white;
     width: 90%;
-    height: 4rem;
+    height: 2rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 1%;
     border-radius: 0.5rem;
     margin: 5%;
 }
-.menu{
-    display: none;
 
+
+
+.nav {
+    position: relative;
 }
-.button-menu:hover .menu:hover{
-    display: inline-block;
+ .button-menu {
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 0.3rem 0.6rem;
+    font-size: 1.2rem;
+    line-height: 1;
+    
+    }
+ .menu {
+    display: none;
+    list-style: none;
+    margin: 0;
+    padding: 1.5rem 1.5rem 1rem;
+    background: white;
+    border-radius: 0.5rem;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+    font-family: Josefin Sans;
+    position: absolute;
+    top: calc(100% + 0.5rem);
+    left: 0;
+    min-width: 180px;
+    z-index: 10;
 }
+.menu::  {
+    position: absolute;
+    top: -0.5rem;       
+    left: 0;
+    right: 0;
+    height: 0.5rem;
+  }
+.menu li {
+    margin-bottom: 1.2rem;
+}
+.menu li:last-child {
+    margin-bottom: 0;
+}
+.menu li a {
+    text-decoration: none;
+    color: #1a1814;
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    transition: color 0.2s;
+}
+.menu li a:hover {
+    color: #5956E9;
+}
+.nav:hover .menu {
+    display: block;
+}
+
+
+
 
 .logo{
     width: 8rem;
-    height: 6rem;
-    background-color: aqua;
-    display: block;
+    height: 4rem;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.5rem;
+    box-shadow: 0 8px 24px rgb(59, 53, 53);
+}
+.logo-img{
+    width: auto;
+    height: 1rem;
 }
 .download-button{
-    background-color:blueviolet;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    background-color:#5956E9;
     border-radius: 0.5rem ;
     border: 0px;
-    width: 4rem;
-    height: 80%;
+    width: auto;
+    height: 100%;
+}
+.download-text{
+    font-family:Josefin Sans;
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
 }
