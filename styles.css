@@ -288,13 +288,13 @@ header{
     max-width: 380px;
 
 }
-.material-symbols-outlined{
+.fa-circle-check{
     color: #5956E9;
-    margin-top: 4%;
+    margin-top: 3%;
     margin-right: 2%;
 }
 .box-title{
-    font-size: 1.50rem;
+    font-size: 107%;
     color: black;
     margin-top: 4%;
 }
@@ -308,6 +308,67 @@ header{
     display: flex;
     align-items: center;
     justify-content: center;
-    margin
 }
+
+.app-features{
+    background-image: url(imagenes/back.png);
+    overflow: hidden;
+    font-family: Josefin Sans;
+    color:white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 10%;
+}
+.features-box-container{
+    max-width: 30rem;
+    padding: 1%;
+    margin: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.phone-model-page3{
+    width: 80%;
+    margin: 5px;
+    margin-bottom: 3rem;
+    height: auto;
+    max-width: 40rem;
+    border-radius: 1rem;
+}
+.fa-message{
+    width: 10%;
+    height: auto;
+}
+.title{
+    max-width: 50%;
+    margin-top: 1rem;
+    margin-bottom: 0.2rem;
+    line-height: 120%;
+}
+.bottom-features, .top-features, .title-features {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+.box-left, .box-right{
+    padding: 0;
+}
+.title-right, .title-left{
+    text-align: center;
+    width: 100%;
+    margin-bottom: 0.2rem;
+}
+.descripcion{
+    max-width: 19rem;
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+    line-height: 130%;
+}
+
 
