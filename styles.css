@@ -9,7 +9,6 @@ h1{
 .download-back{
     background-image: url(imagenes/back.png);
     max-width: 100%;
-    height: 20;
     display: flex;
     flex-direction: column; 
     overflow: hidden;
@@ -347,7 +346,7 @@ header{
     margin-top: 1rem;
     margin-bottom: 0.2rem;
     line-height: 120%;
-    font-weight: ;
+
 }
 .bottom-features, .top-features, .title-features {
     display: flex;
@@ -387,6 +386,7 @@ header{
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     /* armar un flex para ipad y pc */
 }
 .descripcion-team{
@@ -411,6 +411,8 @@ header{
     flex-direction: column;
     margin-bottom: 2rem;
     border: 0.1px solid #63636310;
+    margin-left: 2%;
+    margin-right: 2%;
 }
 .img-perfil{
     margin-top: 2rem;
@@ -426,17 +428,17 @@ header{
     border-radius: 100%;
     max-width: 200px;
     max-height: 200px;
-    width: 80%;
+    width: 74%;
     height: auto;
 }
 .circle4{
     display: flex;
     position: absolute;
     z-index: -2;
-    width: 84%;
-    height: 103%;
+    width: 78%;
+    height: 105%;
     border-radius: 50%;
-    border: 4px solid  #5B6FE8;
+    border: 4px solid #5B6FE8;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -465,12 +467,12 @@ header{
 .team-name{
     margin-top: 1rem;
     margin-bottom: 0rem;
-    font-size: 1.4rem;
+    font-size: 1rem;
 }
 .team-department{
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
-    font-size: 1rem;
+    font-size: 0.7rem;
     color: #6C6C72;
 }
 .team-redes{
@@ -480,7 +482,7 @@ header{
     width: 70%;
     margin-bottom: 0.5rem;  
 }
-.team-redes a i .fa-brands:hover{
+.team-redes a:hover{
     color: #5956E9;
 }
 .barra{
@@ -488,3 +490,96 @@ header{
     color:#6C6C72;
 }
 
+.box-contact{
+    border: 0.25rem solid rgb(250, 252, 250);
+    box-shadow: 0 8px 10px rgba(59, 53, 53, 0.521);
+    width: 80%;
+    padding: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1rem;
+    background-color: white;
+    position: relative;
+    max-width: 25rem;
+}
+.prefooter{
+    background-color: #232233;
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 25%;
+    overflow: hidden;
+    transform: translate(0%, 50%);
+} 
+ .mail, .phone{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-top: 0.5rem;
+        font-family: Josefin Sans;
+
+    }
+    .fa-envelope, .fa-phone{
+        color: white;
+    }
+    .circle{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 100%;
+        width: 2rem;
+        height: 2rem;
+        background-color: #5956E9;
+    }
+@media (min-width:768px) {
+    .barra-vertical{
+        display: flex;
+
+    }
+    .barra-horizontal{
+        display: none;
+    }
+}
+@media (max-width:768px){
+    .barra-vertical{
+        display: none;
+
+    }
+    .box-contact{
+        flex-direction: column;
+    }
+   
+    .barra-horizontal{
+        display: flex;
+        width: 80%;
+        border: 0.08rem solid black;
+        margin: 4%;
+    }
+}
+footer{
+    display: flex;
+    margin-top: 4rem;
+    background-color: #232233;
+    color: white;
+    flex-direction: column;
+    padding: 5%;
+    font-family: Josefin Sans;
+}
+.logo-footer{
+    font-size: 3rem;
+    margin: 0%;
+}
+.subtitle{
+    font-size: 1.7rem;
+    margin-bottom: 0.5rem;
+}
+.barra-h{
+    width: 100%;
+}
+.button-mail{
+    display: flex;
+    flex-direction: row;
+    
+}
