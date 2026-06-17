@@ -296,7 +296,7 @@ header{
     content: "";
     position: absolute;
     z-index: 0;
-    top: 24.5rem;
+    top: 21 .5rem;
     left: 2.5rem;
     right: 5.5rem;
     bottom: 0.5rem;
@@ -308,7 +308,15 @@ header{
     align-items: center;
     justify-content: space-around;
 }
-.box-info{
+@media (max-width:767px) {
+    .order-about{
+        flex-direction: column;
+    }
+    .circle-shadow::before{
+        top: 24.5rem;
+    }
+}
+.about-box-info{
     margin-top: 2rem;
     width: 90%;
     box-shadow: 0 8px 10px rgba(59, 53, 53, 0.521);
@@ -335,7 +343,7 @@ header{
     color: #6C6C72;
     font-size: 90%;
 }
-.boxs-container{
+.about-boxs-container{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -476,7 +484,7 @@ header{
     margin-left: 2%;
     margin-right: 2%;
 }
-.img-perfil{
+.perfil-container{
     margin-top: 2rem;
     margin-bottom: 2rem;
     display: flex;
@@ -486,7 +494,7 @@ header{
     justify-content: center;
     z-index: 2;
 }
-.carla{
+.team-perfil-img{
     border-radius: 100%;
     max-width: 200px;
     max-height: 200px;
@@ -552,7 +560,7 @@ header{
     color:#6C6C72;
 }
 
-.box-contact{
+.contact-box{
     border: 0.25rem solid rgb(250, 252, 250);
     box-shadow: 0 8px 10px rgba(59, 53, 53, 0.521);
     width: 80%;
@@ -583,36 +591,30 @@ header{
         margin-top: 0.5rem;
         font-family: Josefin Sans;
 
-    }
-    .fa-envelope, .fa-phone{
+    } 
+.fa-envelope, .fa-phone{
         color: white;
     }
-    .circle{
+.contact-icon-circle{
         display: flex;
         justify-content: center;
         align-items: center;
         border-radius: 100%;
         width: 2rem;
         height: 2rem;
+        margin: 0.5rem;
         background-color: #5956E9;
     }
 @media (min-width:767px) {
-    .barra-vertical{
-        display: flex;
+    .contact-bar{
         border: 0.08rem solid black;
         height: 3rem;
-
-    }
-    .barra-horizontal{
-        display: none;
     }
     .mail, .phone{
         flex-direction: row;
     }
-    .circle{
-        margin: 0.5rem;
-    }
-    .box-contact{
+    .contact-box{
+        display: flex;
         padding-right: 1rem ;
         padding-left: 1rem;
         max-width: 37rem;
@@ -620,18 +622,13 @@ header{
     }
 }
 @media (max-width:767px){
-    .barra-vertical{
-        display: none;
-
-    }
-    .box-contact{
-        flex-direction: column;
-    }
-    .barra-horizontal{
-        display: flex;
-        width: 80%;
+    .contact-bar{
         border: 0.08rem solid black;
-        margin: 4%;
+        width: 3rem;
+    }
+    .contact-box{
+        display: flex;
+
     }
 }
 footer{
@@ -646,7 +643,6 @@ footer{
 @media (max-width:767px) {
     footer{
         display: flex;
-        flex-direction: row;
     }
 
 }
@@ -673,3 +669,4 @@ li{
     line-height: 120%;
     padding: 0.3rem;
 }
+/*  */
