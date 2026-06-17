@@ -49,7 +49,7 @@ header{
     box-shadow: 0 8px 24px rgba(0,0,0,0.12);
     font-family: Josefin Sans;
     position: absolute;
-    top: calc(100% + 0.5rem);
+    top: 0.5rem;
     left: 0;
     min-width: 180px;
     z-index: 10;
@@ -122,6 +122,8 @@ header{
     font-size: 1rem;
 }
 
+/* GREAT APP */
+
 .great-app-title{
     font-size: 1.80rem;
     color: #5956E9;
@@ -154,64 +156,92 @@ header{
     display: flex;
     justify-content: center;
     align-items: center;
-
+}
+@media (min-width:767px) {
+    .download{
+        flex-direction: row;
+        margin-top: 4%;
+        margin-bottom: 5%;
+    }
+}
+@media (max-width:767px) {
+    .download{
+        flex-direction: column;
+    }
 }
 
-
+.boxcontainer-download{
+    max-width: 550px;
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .great-app-box{
     display: flex;
-    flex-direction: column;
-    box-sizing: border-box;     
+    flex-direction: column;   
     position: relative;
     z-index: 1;
     padding: 7%; 
     font-family:Josefin Sans;
     margin-top: 9%;
-    margin-right: 5%; 
-    max-width: 40rem;
-    max-height: 40rem;
+    max-width: 21rem;
+    background-color: white;
+}
+@media (min-width:767px) {
+    .great-app-box{
+        width: 69%;
+        max-width: 21rem;
+}
 }
 
-.back-box {
-    background-color: white;
-    padding: 5%;
-    max-width: 380px;
-    min-width: 86%;
-    margin-left: 5%;
-}
-.great-app-box::before{
+
+.shadow-download{
     display: flex;
     position: absolute;
     content: "";
-    z-index: -1;
-    top: 3%;
-    left: 20%;
-    right: 2%;
-    bottom: 3%;
-    margin-right: auto;
-    min-height: 73%;
-    min-width: 61%;
-    max-width: 350px;
-    max-height: 343px;
+    z-index: 0;
+    width: 73%;
+    height: 62%;
+    border: 0.5rem solid #7572FF;
+    max-width: 373px;
+    max-height: 396px;
+}
+@media (min-width:767px) {
+    .shadow-download{
+    transform: translate(10%, 6%);
+    border: 0.7rem solid #7572FF;
+}
+
+}
+@media (max-width:  767px) {
+.shadow-download{
+    transform: translate(10%, 5%);
     border: 0.5rem solid #7572FF;
 }
+.model-phone-img{
+    margin-left: 1rem;
+}
+}
+
 .model-phone-img{
     display: flex;
     height: auto;
     width: 30rem;
     max-width: 30rem;
-    margin-top: 2%;
+    margin-top: 4rem;
     justify-content: center;
-    margin-left: 15%;
     object-fit: contain;
 }
+
 .model-phone{
-    width: 100%;
     height: 100%;
+    max-width: 300px;
     display: flex;
     justify-content: flex-start;
 }
 
+/* ABOUT */
 
 .about-app{
     background-color: white;
@@ -220,7 +250,7 @@ header{
     display: flex;
     flex-direction: column;
     justify-content: center;
-
+    margin-bottom: 5rem;
     padding: 5%;
 }
 .about-title{
@@ -231,7 +261,6 @@ header{
     margin-top: 4%;
     margin-bottom: 4%;
     padding-right: 7%;
-
     padding: 0;
 }
 .about-text{
@@ -242,7 +271,6 @@ header{
     line-height: 135%;
     color: #6C6C72;
     font-size: 90%;
-
 }
 .about-img{
     display: flex;
@@ -268,12 +296,17 @@ header{
     content: "";
     position: absolute;
     z-index: 0;
-    top: 18.5rem;
+    top: 24.5rem;
     left: 2.5rem;
     right: 5.5rem;
-    bottom: 1rem;
+    bottom: 0.5rem;
     border-radius: 100%;
     box-shadow: 0 8px 10px rgba(59, 53, 53, 0.521);
+}
+.order-about{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
 }
 .box-info{
     margin-top: 2rem;
@@ -308,6 +341,9 @@ header{
     justify-content: center;
 }
 
+
+/* APP FEATURES */
+
 .app-features{
     background-image: url(imagenes/back.png);
     overflow: hidden;
@@ -319,8 +355,11 @@ header{
     flex-direction: column;
     padding: 10%;
 }
+.title-app{
+    font-size:1.5rem ;
+}
 .features-box-container{
-    max-width: 30rem;
+    max-width: 36rem;
     padding: 1%;
     margin: 0.5rem;
     display: flex;
@@ -329,16 +368,26 @@ header{
     align-items: center;
     text-align: center;
 }
+@media (min-width:767px) {
+    .features-box-container{
+        display: flex;
+        flex-direction: row;
+    }
+    .phone-model-3d{
+        max-width: 80%;
+    }
+}
 .phone-model-page3{
     width: 80%;
     margin: 5px;
     margin-bottom: 3rem;
     height: auto;
-    max-width: 40rem;
+    max-width: 18rem;
     border-radius: 1rem;
+    margin: 1rem;
 }
-.fa-message{
-    width: 10%;
+.fa-message, .fa-headset, .fa-eye, .fa-mobile-screen, .fa-window-maximize, .fa-bezier-curve{
+    width: 2.5rem;
     height: auto;
 }
 .title{
@@ -358,6 +407,14 @@ header{
 .box-left, .box-right{
     padding: 0;
 }
+@media (min-width:767px) {
+    .box-left{
+        text-align: right;
+    }
+    .box-right{
+        text-align: left;
+    }
+}
 .title-right, .title-left{
     text-align: center;
     width: 100%;
@@ -370,6 +427,7 @@ header{
     line-height: 130%;
 }
 
+/* CREATIVE TEAM */
 
 .team{
     align-items: center;
@@ -387,7 +445,11 @@ header{
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    /* armar un flex para ipad y pc */
+}
+@media (min-width:767px) {
+    .order-team{
+        flex-direction: row;
+    }
 }
 .descripcion-team{
     max-width: 19rem;
@@ -508,9 +570,10 @@ header{
     position: absolute;
     z-index: -1;
     width: 100%;
-    height: 25%;
+    height: 29%;
     overflow: hidden;
-    transform: translate(0%, 50%);
+    transform: translate(0%, 52%); 
+    box-shadow: -1px 1px 50px 28px #23223396;
 } 
  .mail, .phone{
         display: flex;
@@ -533,16 +596,30 @@ header{
         height: 2rem;
         background-color: #5956E9;
     }
-@media (min-width:768px) {
+@media (min-width:767px) {
     .barra-vertical{
         display: flex;
+        border: 0.08rem solid black;
+        height: 3rem;
 
     }
     .barra-horizontal{
         display: none;
     }
+    .mail, .phone{
+        flex-direction: row;
+    }
+    .circle{
+        margin: 0.5rem;
+    }
+    .box-contact{
+        padding-right: 1rem ;
+        padding-left: 1rem;
+        max-width: 37rem;
+        justify-content: space-around;
+    }
 }
-@media (max-width:768px){
+@media (max-width:767px){
     .barra-vertical{
         display: none;
 
@@ -550,7 +627,6 @@ header{
     .box-contact{
         flex-direction: column;
     }
-   
     .barra-horizontal{
         display: flex;
         width: 80%;
@@ -567,6 +643,13 @@ footer{
     padding: 5%;
     font-family: Josefin Sans;
 }
+@media (max-width:767px) {
+    footer{
+        display: flex;
+        flex-direction: row;
+    }
+
+}
 .logo-footer{
     font-size: 3rem;
     margin: 0%;
@@ -580,6 +663,13 @@ footer{
 }
 .button-mail{
     display: flex;
-    flex-direction: row;
-    
+    flex-direction: row; 
+}
+ul{
+    padding: 0.3rem;
+}
+li{
+    list-style: none;
+    line-height: 120%;
+    padding: 0.3rem;
 }
