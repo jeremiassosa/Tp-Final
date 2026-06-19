@@ -92,10 +92,10 @@ a {
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
     font-family: Josefin Sans;
     position: absolute;
-    top: 0.5rem;
+    top: 100%;
     left: 0;
     min-width: 180px;
-    z-index: 10;
+    z-index: 3;
 }
 
 .menu:before {
@@ -173,7 +173,7 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 0.5rem;
+    border-radius: 0.25rem;
     box-shadow: 0 8px 10px rgba(59, 53, 53, 0.634);
     position: absolute;
     left: 50%;
@@ -213,7 +213,7 @@ a {
 /* GREAT APP */
 
 .great-app-title {
-    font-size: 1.80rem;
+    font-size: 144%;
     color: #5956E9;
     line-height: 135%;
     margin-top: 4%;
@@ -248,16 +248,15 @@ a {
 .download {
     margin-top: 2rem;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
 }
 
 .boxcontainer-download {
-    max-width: 550px;
-    width: 70%;
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
 
 .great-app-box {
@@ -267,67 +266,47 @@ a {
     z-index: 1;
     padding: 7%;
     font-family: Josefin Sans;
-    margin-top: 9%;
-    max-width: 21rem;
+    width: 76%;
+    margin: 0 4%;
+    max-width: 394px;
     background-color: white;
 }
-
-
-
-.shadow-download {
+.shadow-download{
+    max-width: 395px;
+}
+.shadow-download::before{
     display: flex;
-    position: absolute;
     content: "";
+    position: absolute;
     z-index: 0;
-    width: 73%;
-    height: 62%;
     border: 0.5rem solid #7572FF;
-    max-width: 373px;
-    max-height: 396px;
+    width: 87%;
+    height: 106%;
+    transform: translate(10%, -5%);
 }
-
-@media (max-width:350px) {
-    .shadow-download {
-        width: 73%;
-        height: 62%;
-    }
-
-    .shadow-download {
-        transform: translate(9%, 4%);
-        border: 0.5rem solid #7572FF;
-    }
-}
-
 
 @media (min-width:767px) {
-    .shadow-download {
-        transform: translate(10%, 3.5%);
-        border: 0.7rem solid #7572FF;
-    }
-
     .download {
         flex-direction: row;
         margin-top: -1rem;
         margin-bottom: 5%;
     }
-
-    .great-app-box {
-        width: 69%;
-        max-width: 21rem;
+    .shadow-download::before{
+        width: 86%;
+        height: 108%;
+        transform: translate(11%, -6%);
     }
-}
+    .great-app-title{
+        font-weight: 700;
+    }
 
+
+}
 
 @media (max-width:767px) {
     .download {
         flex-direction: column;
     }
-
-    .shadow-download {
-        transform: translate(10%, 5%);
-        border: 0.5rem solid #7572FF;
-    }
-
     .model-phone-img {
         margin-left: 2rem;
     }
@@ -656,7 +635,6 @@ a {
     margin-bottom: 2rem;
     display: flex;
     position: relative;
-    display: inline-flex;
     align-items: center;
     justify-content: center;
     z-index: 2;
@@ -837,7 +815,7 @@ a {
 
 @media (max-width:767px) {
     .contact-bar {
-        border: 0.1rem solid black;
+        border: 1.5px solid black;
         width: 50%;
     }
 
@@ -961,6 +939,7 @@ li {
 .fa-paper-plane {
     width: 1rem;
     height: 1rem;
+    color: black;
     background-color: #5956E9;
 }
 
